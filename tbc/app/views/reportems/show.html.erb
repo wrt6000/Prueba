@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @reportem.fecha %>
+</p>
+
+<p>
+  <strong>Trayectos:</strong>
+  <%= @reportem.trayectos %>
+</p>
+
+<%= link_to 'Edit', edit_reportem_path(@reportem) %> |
+<%= link_to 'Back', reportems_path %>

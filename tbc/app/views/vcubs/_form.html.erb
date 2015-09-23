@@ -1,0 +1,29 @@
+<%= form_for(@vcub) do |f| %>
+  <% if @vcub.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vcub.errors.count, "error") %> prohibited this vcub from being saved:</h2>
+
+      <ul>
+      <% @vcub.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :posicion %><br>
+    <%= f.text_field :posicion %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :prestada %><br>
+    <%= f.check_box :prestada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

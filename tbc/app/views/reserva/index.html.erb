@@ -1,0 +1,12 @@
+<h1>Reserva#index</h1>
+<% @reserva.each do |reserva| %>
+    <p>Fecha de la reserva: <%= reserva.fecha %></p>
+    <p> Nombre del usuario: <%= reserva.nombreUsuario %></p>
+    <p> IDUsuario: <%= reserva.usuario_id %></p>
+    <p> Ruta: <%= reserva.ruta %></p>
+    <p> Origen: <%= reserva.direccion_salida%></p>
+    <p> Destino: <%= reserva.direccion_llegada%></p>
+
+    <br> </br>
+
+<% end %>

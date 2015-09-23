@@ -1,0 +1,45 @@
+<%= form_for(@tranvium) do |f| %>
+  <% if @tranvium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tranvium.errors.count, "error") %> prohibited this tranvium from being saved:</h2>
+
+      <ul>
+      <% @tranvium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :identificacion %><br>
+    <%= f.text_field :identificacion %>
+  </div>
+  <div class="field">
+    <%= f.label :linea %><br>
+    <%= f.text_field :linea %>
+  </div>
+  <div class="field">
+    <%= f.label :kilms_ultima_revision %><br>
+    <%= f.text_field :kilms_ultima_revision %>
+  </div>
+  <div class="field">
+    <%= f.label :temperatura %><br>
+    <%= f.text_field :temperatura %>
+  </div>
+  <div class="field">
+    <%= f.label :posicion %><br>
+    <%= f.text_field :posicion %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.text_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :boton_panico %><br>
+    <%= f.check_box :boton_panico %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

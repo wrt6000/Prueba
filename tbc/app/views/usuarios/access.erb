@@ -1,0 +1,95 @@
+# encoding: utf-8
+<div class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0;background:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#inicio">
+        <i class='fa fa-rocket'></i>
+        TBC
+      </a>
+    </div>
+    <div class='collapse navbar-collapse'>
+      <ul class='nav navbar-nav'>
+        <li>
+          <a href="#inicio">Nosotros</a>
+        </li>
+        <li>
+          <a href='#nosotros'>Servicios</a>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Correo" style="width:120px">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Contraseña" style="width:120px">
+        </div>
+        <button type="submit" class="btn btn-info">Ingresar</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="padding:20px;background:#6699ff;color:white;margin-top:50px;">
+  <div class="row">
+    <div class="col-md-3 col-md-offset-2 text-center">
+      <br>
+      <i class="fa fa-fighter-jet fa-5x" style="color:white"></i>
+    </div>
+    <div class="col-md-5 text-center">
+      <h1>
+        Bienvenido a TBC
+      </h1>
+      <p>
+        TBC es una empresa de transporte público de la ciudad comprometida con el medio ambiente. Actualmente contamos con 250 tranvías, 250 mobibus y 4000 vcubs para prestar el mejor servicio posible a los usuarios
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row col-md-12 text-center" style="margin-bottom:50px">
+    <h1>Nuestros servicios:</h1>
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <i class="fa fa-cab fa-5x"></i><br>
+      <h1>Mobibus</h1>
+      <p class="text-justify">
+        Nuestro servicio de mobibus Está diseñado para personas con necesidades especiales. Reserva con anticipación un carro para que te lleve a donde necesites
+      </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fa fa-train fa-5x"></i><br>
+      <h1>Tranvía</h1>
+      <p class="text-justify">
+        Nuestro servicio de tranvía cuenta actualmente con tres lineas que recorren la ciudad y están activas desde las 5 A.M. hasta la media noche.
+      </p>
+    </div>
+    <div class="col-md-4 text-center">
+      <i class="fa fa-bicycle fa-5x"></i><br>
+      <h1>Vcub</h1>
+      <p class="text-justify">
+        Nuestro servicio de vcubs es nuestro servicio ecológico. Alquila una bicicleta en cualquiera de las estaciones habilitadas y devuélvela en cualquier otra.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="background:#6699ff;color:white;padding-top:50px;margin-bottom:20px">
+  <div class="container col-md-8 col-md-offset-2">
+    <div class="row text-center">
+      <h1>¡Comienza a usar nuestros servicios ahora!</h1>
+    </div>
+    <div class="row col-md-offset-2" style='margin-bottom:50px;padding-top:20px'>
+      <div class="col-md-4">
+        <p>
+          Únete a más de 5000 usuarios satisfechos que usan nuestros medios de transporte
+        </p>
+      </div>
+      <div class='col-md-4'>
+        <%= @usuario= Usuario.new
+            render 'form' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="text-right" style="font-size:8px">
+  <a href="administrador">Ingreso de administrador</a>
+</div>

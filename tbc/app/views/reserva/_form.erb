@@ -1,0 +1,30 @@
+# encoding: utf-8
+<%= form_for(@reserva) do |f| %>
+    <% if @reserva.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+          <ul>
+            <% @reserva.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div>
+      <%= f.text_field :nombre, :placeholder => "Nombre", class: "form-control" %>
+    </div>
+    <div>
+      <%= f.text_field :documento, :placeholder => "Documento", class: "form-control" %>
+    </div>
+    <div>
+      <%= f.text_field :correo, :placeholder => "Correo",class: "form-control" %>
+    </div>
+    <div>
+          <%= f.password_field :contrasenia, :placeholder => "Contraseña",class: "form-control" %>
+    </div>
+    <div class="actions">
+      <%= f.submit :value=> "Regístrate!",class: "btn btn-success form-control" %>
+    </div>
+<% end %>

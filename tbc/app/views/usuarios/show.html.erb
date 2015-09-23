@@ -1,0 +1,83 @@
+# encoding: utf-8
+<div class="navbar navbar-default navbar-fixed-top" style="margin-bottom:0;background:white">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#inicio">
+        <i class='fa fa-rocket'></i>
+        TBC
+      </a>
+    </div>
+    <div class='collapse navbar-collapse'>
+      <ul class='nav navbar-nav'>
+        <li>
+          <a href="#inicio"><%= @usuario.nombre %></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#">Salir</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<p id="notice"><%= notice %></p>
+<div class="container-fluid" style="margin-top:50px;">
+  <div class="col-md-5 col-md-offset-3 text-center" style="padding-top:50px;">
+    <i class="fa fa-frown-o fa-5x"></i>
+    <h2>No tienes actividad aún. Solicita un servicio</h2>
+    <div class="modal fade" id="reservar" tabindex="-1" role="dialog" aria-labelledby="tituloreservar" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+            <h4 class="modal-title" id="tituloreservar">Reservar mobibus</h4>
+          </div>
+          <div class="modal-body">
+            <form class="text-left">
+              <div class="form-group">
+                <label for="fechaservicio">¿Cuándo necesitas el servicio?</label>
+                <input id="fechaservicio" type="date" class="form-control" placeholder="Fecha de tu reserva">
+              </div>
+              <div class="form-group">
+                <label for="direccionsalida">¿Dónde deberíamos recogerte?</label>
+                <input id="direccionsalida" type="text" class="form-control" placeholder="Dirección de salida">
+              </div>
+              <div class="form-group">
+                <label for="direccionllegada">¿A dónde necesitas ir?</label>
+                <input id="direccionllegada" type="text" class="form-control" placeholder="Dirección de destino">
+              </div>
+              <div class="form-group">
+                <label for="horasalida">¿A qué hora debemos llegar por ti?</label>
+                <input id="horasalida" type="time" class="form-control" placeholder="Hora de salida">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary">Confirmar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <button class="btn btn-default" data-toggle="modal" data-target="#reservar">Reserva un mobibus</button>
+    <button class="btn btn-default">Alquila un vcub</button>
+  </div>
+  <div class="col-md-3 col-md-offset-1">
+    <h1>Tu información</h1>
+    <div class="text-right" style="font-size:8pt;">
+      <%= link_to 'Editar', edit_usuario_path(@usuario) %>
+    </div>
+    <p>
+      <%= @usuario.nombre %>
+    </p>
+    <p>
+      Documento: <%= @usuario.documento %>
+    </p>
+    <p>
+      <%= @usuario.correo %>
+    </p>
+  </div>
+</div>
+

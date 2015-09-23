@@ -1,0 +1,29 @@
+<h1>Listing reportems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>IDMobibus</th>
+      <th>Fecha</th>
+      <th>Trayectos</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reportems.each do |reportem| %>
+      <tr>
+        <td><%= reportem.mobibus_id %></td>
+        <td><%= reportem.fecha %></td>
+        <td><%= reportem.trayectos %></td>
+        <td><%= link_to 'Show', reportem %></td>
+        <td><%= link_to 'Edit', edit_reportem_path(reportem) %></td>
+        <td><%= link_to 'Destroy', reportem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reportem', new_reportem_path %>

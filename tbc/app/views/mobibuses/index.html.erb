@@ -1,0 +1,29 @@
+<h1>Listing mobibuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Posicion</th>
+      <th>Estado</th>
+      <th>Kilms ultima revision</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mobibuses.each do |mobibus| %>
+      <tr>
+        <td><%= mobibus.posicion %></td>
+        <td><%= mobibus.estado %></td>
+        <td><%= mobibus.kilms_ultima_revision %></td>
+        <td><%= link_to 'Show', mobibus %></td>
+        <td><%= link_to 'Edit', edit_mobibus_path(mobibus) %></td>
+        <td><%= link_to 'Destroy', mobibus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mobibus', new_mobibus_path %>

@@ -1,0 +1,29 @@
+<h1>Listing vcubs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Posicion</th>
+      <th>Estado</th>
+      <th>Prestada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vcubs.each do |vcub| %>
+      <tr>
+        <td><%= vcub.posicion %></td>
+        <td><%= vcub.estado %></td>
+        <td><%= vcub.prestada %></td>
+        <td><%= link_to 'Show', vcub %></td>
+        <td><%= link_to 'Edit', edit_vcub_path(vcub) %></td>
+        <td><%= link_to 'Destroy', vcub, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vcub', new_vcub_path %>

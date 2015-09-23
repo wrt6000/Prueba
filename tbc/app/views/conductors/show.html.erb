@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @conductor.nombre %>
+</p>
+
+<p>
+  <strong>Cedula:</strong>
+  <%= @conductor.cedula %>
+</p>
+
+<%= link_to 'Edit', edit_conductor_path(@conductor) %> |
+<%= link_to 'Back', conductors_path %>

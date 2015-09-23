@@ -1,0 +1,23 @@
+<h1>Listado Conductor-Mobibus</h1>
+<% @mobibus_id%>
+<% @id%>
+<table>
+  <thead>
+  <tr>
+    <th>Conductor</th>
+    <th>Mobibus</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @conductormobibuses.each do |conductorm| %>
+      <tr>
+        <td><%= conductorm.conductor_id %></td>
+        <td><%= conductorm.mobibus_id%></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>

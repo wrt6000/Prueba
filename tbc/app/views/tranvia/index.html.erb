@@ -1,0 +1,39 @@
+<h1>Listing tranvia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Identificacion</th>
+      <th>Linea</th>
+      <th>Kilms ultima revision</th>
+      <th>Temperatura</th>
+      <th>Posicion</th>
+      <th>Estado</th>
+      <th>Boton panico</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tranvia.each do |tranvium| %>
+      <tr>
+        <td><%= tranvium.id %></td>
+        <td><%= tranvium.identificacion %></td>
+        <td><%= tranvium.linea %></td>
+        <td><%= tranvium.kilms_ultima_revision %></td>
+        <td><%= tranvium.temperatura %></td>
+        <td><%= tranvium.posicion %></td>
+        <td><%= tranvium.estado %></td>
+        <td><%= tranvium.boton_panico %></td>
+        <td><%= link_to 'Show', tranvium %></td>
+        <td><%= link_to 'Edit', edit_tranvium_path(tranvium) %></td>
+        <td><%= link_to 'Destroy', tranvium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tranvium', new_tranvium_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identificacion:</strong>
+  <%= @tranvium.identificacion %>
+</p>
+
+<p>
+  <strong>Linea:</strong>
+  <%= @tranvium.linea %>
+</p>
+
+<p>
+  <strong>Kilms ultima revision:</strong>
+  <%= @tranvium.kilms_ultima_revision %>
+</p>
+
+<p>
+  <strong>Temperatura:</strong>
+  <%= @tranvium.temperatura %>
+</p>
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @tranvium.posicion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @tranvium.estado %>
+</p>
+
+<p>
+  <strong>Boton panico:</strong>
+  <%= @tranvium.boton_panico %>
+</p>
+
+<%= link_to 'Edit', edit_tranvium_path(@tranvium) %> |
+<%= link_to 'Back', tranvia_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @vcub.posicion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @vcub.estado %>
+</p>
+
+<p>
+  <strong>Prestada:</strong>
+  <%= @vcub.prestada %>
+</p>
+
+<%= link_to 'Edit', edit_vcub_path(@vcub) %> |
+<%= link_to 'Back', vcubs_path %>

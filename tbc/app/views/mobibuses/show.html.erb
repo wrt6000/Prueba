@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Posicion:</strong>
+  <%= @mobibus.posicion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @mobibus.estado %>
+</p>
+
+<p>
+  <strong>Kilms ultima revision:</strong>
+  <%= @mobibus.kilms_ultima_revision %>
+</p>
+
+<%= link_to 'Edit', edit_mobibus_path(@mobibus) %> |
+<%= link_to 'Back', mobibuses_path %>
